@@ -1,0 +1,19 @@
+<p>Название: {{car.car_name }}</p>
+<p>Марка: {{car.brand }}</p>
+<p>Модель машины: {{car.model }}</p>
+<p>Год выпуска: {{car.year }}</p>
+<p>Цена: {{car.price}} сом</p>
+<p>Пробег: {{car.mileage }}</p>
+<p>Цвет: {{car.color }}</p>
+<p>Регион, город: {{car.city }}</p>
+<p>Описание: {{car.description }}</p>
+
+{% if car.image %}
+<p><img src="{{ car.image.url }}"></p>
+{% else %}
+<p>No IMAGE</p>
+{% endif %}
+
+
+<button><a href="{% url 'car_update' car.pk %}">UPDATE</a></button>
+<button><a href="{% url 'car_delete' car.pk %}">DELETE</a></button>

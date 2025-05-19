@@ -1,0 +1,13 @@
+
+{% for car in cars %}
+
+    <li>
+        <p><a href="{% url 'car_detail' car.pk %}">{{ car.car_name }}</a></p>
+        <p>{{ car.price }}</p>
+        <p>{{ car.year }}</p>
+        <p>{{ car.city }}</p>
+    </li>
+
+{% endfor %}
+
+<button><a href="{% url 'car_create' %}">CREATE</a></button>

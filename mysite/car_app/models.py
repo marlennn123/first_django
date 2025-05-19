@@ -26,6 +26,7 @@ class Car(models.Model):
     color = models.CharField(max_length=16)
     city = models.CharField(max_length=32)
     description = models.TextField()
+    image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.car_name
